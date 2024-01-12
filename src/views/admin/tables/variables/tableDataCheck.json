@@ -1,0 +1,38 @@
+[
+  {
+    "name": ["Total Equity", false],
+    "2020": 1024,
+    "2019": 1024,
+    "2018": 345
+  },
+  {
+    "name": ["Reserves - capital", true],
+    "2020": 1024,
+    "2019": 1024,
+    "2018": 345
+  },
+  {
+    "name": ["Unclaimed dividends", true],
+    "2020": 1024,
+    "2019": 1024,
+    "2018": 345
+     },
+  {
+    "name": ["Total Equity and liabilities", true],
+    "2020": 1024,
+    "2019": 1024,
+    "2018": 345
+  },
+  {
+    "name": ["Net sales", false],
+    "2020": 1024,
+    "2019": 1024,
+    "2018": 345
+  },
+  {
+    "name": ["Operating profit", false],
+    "2020": 1024,
+    "2019": 1024,
+    "2018": 345
+  }
+]

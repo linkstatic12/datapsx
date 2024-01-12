@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import "react-alice-carousel/lib/alice-carousel.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		font-family: 'DM Sans', sans-serif !important;
+		font-feature-settings: 'kern' !important;
+		-webkit-font-smoothing: antialiased;
+		letter-spacing: -0.5px;
+	}
+}
+
+input.defaultCheckbox::before {
+	content: url(../src/assets/svg/checked.svg); 
+	color: white;
+	opacity: 0; 
+	height: 16px; 
+	width: 16px;
+	position: absolute; 
+	left: 50%;
+	transform: translate(-50%, 0px);
+} 
+
+input:checked.defaultCheckbox::before { 
+	opacity: 1;
+}
+body {
+	height: 100vh;
+	width: 100vw;
+	background-color: black;
+	margin: 0rem;
+	overflow: hidden;
+  }
+  
+  #image-track {
+	display: flex;
+	gap: 4vmin;
+	position: absolute;
+	left: 0%;
+	top: 50%;
+	transform: translate(0%, -50%); 
+	user-select: none; /* -- Prevent image highlighting -- */
+  }
+  
+  #image-track > .image {
+	width: 40vmin;
+	height: 56vmin;
+	object-fit: cover;
+	object-position: 100% center;
+  }
+  
+  /* -- YouTube Link Styles -- */
+  
+  body.menu-toggled > .meta-link > span {
+	color: rgb(30, 30, 30);
+  }
+  
+  #source-link {
+	bottom: 60px;
+  }
+  
+  #source-link > i {
+	color: rgb(94, 106, 210);
+  }
+  
+  #yt-link > i {
+	color: rgb(239, 83, 80);
+  }
+  
+  .meta-link {
+	align-items: center;
+	backdrop-filter: blur(3px);
+	background-color: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 6px;
+	bottom: 10px;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+	cursor: pointer;  
+	display: inline-flex;
+	gap: 5px;
+	left: 10px;
+	padding: 10px 20px;
+	position: fixed;
+	text-decoration: none;
+	transition: background-color 400ms, border-color 400ms;
+	z-index: 10000;
+  }
+  
+  .meta-link:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .meta-link > i, .meta-link > span {
+	height: 20px;
+	line-height: 20px;
+  }
+  
+  .meta-link > span {
+	color: white;
+	font-family: "Rubik", sans-serif;
+	font-weight: 500;
+  }
+.back-video{
+
+z-index: -199999;
+
+}
