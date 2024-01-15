@@ -110,7 +110,7 @@ const Tables = () => {
   setCurrentYear(item);
   let  midtabQA = [];
   
-  axios.get(`http://localhost:5000/api/v1/symbol/`+count.company[0].Symbol+"/"+item)
+  axios.get(`http://20.197.15.58/api/v1/symbol/`+count.company[0].Symbol+"/"+item)
       .then(({ data }) => {
        
         data.symbols.forEach(obj => {
