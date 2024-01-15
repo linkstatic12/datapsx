@@ -64,7 +64,7 @@ const Navbar = (props) => {
   }
   const { onOpenSidenav, brandText } = props;
 
-  const [darkmode, setDarkmode] = React.useState(false);
+  const [darkmode, setDarkmode] = React.useState(true);
   //const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
 
@@ -72,7 +72,7 @@ const Navbar = (props) => {
     
     return (
       <>
-         <span className="block h-full w-full rounded-full bg-lightPrimary text-sm font-medium text-navy-700 outline-none placeholder:!text-gray-400 dark:bg-navy-900 dark:text-white dark:placeholder:!text-white sm:w-fit">{item.name}</span>
+         <span>{item.name}</span>
       </>
     )
   }
@@ -128,6 +128,10 @@ const Navbar = (props) => {
             onFocus={handleOnFocus}
             autoFocus
             formatResult={formatResult}
+            styling={{
+              backgroundColor: "white",
+              color: "black"
+            }}
           />
           </div>
         </div>
