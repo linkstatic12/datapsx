@@ -25,8 +25,9 @@ const Navbar = (props) => {
 
   useEffect(() => {
     // Update the document title using the browser API
-    axios.get(`http://20.197.15.58/api/v1/symbols`)
+    axios.get(`https://docanswers.org/api/v1/symbols`)
       .then(res => {
+       
         setitemList(res.data.symbols);
       
       })
@@ -50,7 +51,7 @@ const Navbar = (props) => {
 
   const handleOnSelect = (item) => {
     
-    axios.get('http://20.197.15.58/api/v1/symbol/'+item.name)
+    axios.get('https://docanswers.org/api/v1/symbol/'+item.name)
       .then(({ data }) => {
         console.log(data)
       dispatch(getCompany(data));
