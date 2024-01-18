@@ -61,7 +61,7 @@ const Tables = () => {
  
   MainData.symbols.forEach(obj => {
    
-    let getYear = new Date(obj.Statementdate).getFullYear();
+    let getYear = new Date(obj.date).getFullYear();
     let isAnnual = obj.period;
     let resultStatement = obj.statement;
     let status = obj.status;
@@ -90,7 +90,7 @@ const Tables = () => {
        
   MainData.symbols.forEach(obj => {
   
-      let getYear = new Date(obj.Statementdate).getFullYear();
+      let getYear = new Date(obj.date).getFullYear();
       
       let isAnnual = obj.period;
       if(getYear==CurrentYear && item==isAnnual){
@@ -115,7 +115,7 @@ const Tables = () => {
        
         data.symbols.forEach(obj => {
           // Process existing properties (e.g., capitalize names)
-          let getMonth = new Date(obj.Statementdate).getMonth();
+          let getMonth = new Date(obj.date).getMonth();
           let AnnualQuarterly = obj.period
           console.log(getMonth)
           if(AnnualQuarterly=="Annual")
