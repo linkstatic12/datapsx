@@ -206,7 +206,16 @@ const CheckTable = (props) => {
                           {cell.value}{" "} 
                         </a>
                       );
-                    } else if (cell.column.Header === "Audit") {
+                    } 
+                    else if (cell.column.Header === "Reported Date") {
+                      data = (
+                        <a className="text-sm font-bold text-navy-700 dark:text-white">
+                          {" "}
+                          {cell.value}{" "} 
+                        </a>
+                      );
+                    }
+                    else if (cell.column.Header === "Audit") {
                       data = (
                         <button class="rounded-full ..." onClick={() => UploadFile(cell.value[0],cell.value[1],cell.value[2],cell.value[3],cell.value[4],cell.value[5])}>View PDF</button>
                         

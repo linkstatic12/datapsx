@@ -47,6 +47,11 @@ const Tables = () => {
       accessor: "date",
     },
     {
+      Header: "Reported Date",
+      accessor: "reporteddate",
+
+    },
+    {
       Header: "Audit",
       accessor:"audit"
     }
@@ -67,11 +72,12 @@ const Tables = () => {
     let status = obj.status;
    
     if(getYear==CurrentYear && CurrentAnnualQuarter==isAnnual && resultStatement==item && status=="Processed"){
-      let newDate = new Date(obj.date)
+      let newDate = new Date(obj.date);
+      let StatementnewDate = new Date(obj.Statementdate);
       let formattedDate= format(newDate, "dd-MMMM-yyyy");
-      
-      midCurrentVariables.push({"name":[obj.alias,false,obj.AuditedUnaudited,obj.variablePeriod],"value":obj.value,"date":formattedDate,"audit":[obj.pdf,obj.page,obj.variablebox,obj.valuebox,obj.width,obj.height],"auditedUnaudited":obj.AuditedUnaudited,"variablePeriod":obj.variablePeriod});
-      
+      let formattedStatementDate = format(StatementnewDate, "dd-MMMM-yyyy");
+      midCurrentVariables.push({"reporteddate":formattedStatementDate,"name":[obj.alias,false,obj.AuditedUnaudited,obj.variablePeriod],"value":obj.value,"date":formattedDate,"audit":[obj.pdf,obj.page,obj.variablebox,obj.valuebox,obj.width,obj.height],"auditedUnaudited":obj.AuditedUnaudited,"variablePeriod":obj.variablePeriod});
+     
     }
   });
   console.log(midCurrentVariables);
